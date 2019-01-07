@@ -45,7 +45,7 @@ end
    #a.each {|v| h[v] +=1 }
 h = Hash.new(0)
 @@genres.each { | v | h.store(v, h[v]+1) }
-
+return h
 # h = { 3=>3, 2=>1, 1=>1, 4=>1 } 
   end
   
