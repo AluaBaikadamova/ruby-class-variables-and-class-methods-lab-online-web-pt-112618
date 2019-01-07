@@ -32,7 +32,7 @@ end
   @artist
 end
   def self.genres
-  @@genres.shift
+  @@genres.uniq
  # unique = names.uniq
   return @@genres
 end
@@ -47,7 +47,7 @@ end
   
    def self.artist_count
    
-@@artist_count= Hash[@@artists.collect { |v| @@artist_count[v] += 1}]
+#@@artist_count= Hash[@@artists.collect { |v| @@artist_count[v] += 1}]
 
   end
 end
