@@ -41,9 +41,8 @@ end
   return @@artists
 end
   def self.genre_count
-   
-@@genre_count= Hash[@@genres.collect { |v| @@genre_count[v] += 1}]
-hash = ary.each_with_object(Hash.new(0)){ |(k,v), h| h[k] += v }
+   @@genres.each { | v | @@genre_count.store(v, @@genre_count[v]+1) }
+
   end
   
    def self.artist_count
