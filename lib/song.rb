@@ -53,6 +53,9 @@ return @@genre_count
    def self.artist_count
    
 #@@artist_count= Hash[@@artists.collect { |v| @@artist_count[v] += 1}]
-
+h = Hash.new(0)
+@@artists.each { | v | h.store(v, h[v]+1) }
+@@artist_count=h
+return @@artist_count
   end
 end
