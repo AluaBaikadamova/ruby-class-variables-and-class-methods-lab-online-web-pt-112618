@@ -37,8 +37,8 @@ end
   return un
 end
   def self.artists
-  @@artists.shift
-  return @@artists
+  um=@@artists.uniq
+  return um
 end
   def self.genre_count
    @@genres.each { | v | @@genre_count.store(v, @@genre_count[v]+1) }
