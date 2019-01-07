@@ -32,9 +32,9 @@ end
   @artist
 end
   def self.genres
-  @@genres.uniq
+ un= @@genres.uniq
  # unique = names.uniq
-  return @@genres
+  return un
 end
   def self.artists
   @@artists.shift
