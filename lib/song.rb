@@ -41,7 +41,8 @@ end
   return um
 end
   def self.genre_count
-   @@genres.each { | v | @@genre_count[v]+=1 }
+   @@genres.each { | v | @@genre_count[v] +=1 }
+   a.each {|v| h[v] +=1 }
 
   end
   
