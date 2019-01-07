@@ -41,9 +41,12 @@ end
   return um
 end
   def self.genre_count
-   @@genres.each { | v | @@genre_count[v] +=1 }
+  # @@genres.each { | v | @@genre_count[v] +=1 }
    #a.each {|v| h[v] +=1 }
+h = Hash.new(0)
+@@genres.each { | v | h.store(v, h[v]+1) }
 
+# h = { 3=>3, 2=>1, 1=>1, 4=>1 } 
   end
   
    def self.artist_count
